@@ -1,0 +1,41 @@
+/**	Student: Zhexuan Zachary Yang &  Yuanting Shao      **/
+/**  X500:     yang4442      &  shaox119                **/
+/**  CSELabs machine: kh4250-1                          **/
+
+Directory:
+src:        sources codes
+include:    header files
+test:       please move all test cases into this directory
+
+Files:
+src:        alloc.c map.c buffer.c main.c makeargv.c
+include:    alloc.h map.h buffer.h main.h makeargv.h
+test:       shall be empty till you move test cases into this directory
+
+How to compile the program:
+use "make" to make executable file "twitterTrend"
+
+How to run from Shell:
+./twitterTrend <inputfile> <numThreads>
+
+for example:
+./twitterTrend test/client3.in 2
+
+
+Purpose:
+This program will simulate how web server works. In this program, synchronization
+mechanisms is achieved by using mutex lock and condition variable and the program
+can manage the access to this shared buffer of clients. This problem is typically
+producer and consumber problem, we solve it by using monitor. Of course, semaphore
+also be appiled here.
+
+Extra details:
+We did extra credits which means, not matter which test case you run, it will be a
+bounded buffer that shared by different threads if there are any.
+
+map.*:          data structure that extract contents from database file and store it.
+alloc.*:        new memory allocator.
+buffer.*:       shared buffer implementation.
+main.*:         basic routine to solve this project.
+makeargv.*:     codes cited from textbook
+twitterTrend.*  solve the producer and consumer problem
